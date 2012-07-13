@@ -1,30 +1,51 @@
-html, body { height: 100%; }
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans+Mono);
 
 body {
-    font-family: 'Helvetica Neue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
     font-style: normal;
     font-weight: 400;
     text-shadow: none;
     text-decoration: none;
     text-transform: none;
-    letter-spacing: 0em;
-    word-spacing: 0em;
+    letter-spacing: 0;
+    word-spacing: 0;
     line-height: 1.4;
     background: url(/images/main_bg.jpg) repeat-x 0 -26px #82b64a;
 }
 
 /* General styles */
 
-h1,h2,h3,h4,h5,h6 {
+h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
-    font-family: 'Georgia', Serif;
+    font-family: 'Georgia', serif;
     line-height: 1.4;
     margin-bottom: 0.5em;
 }
 
+h1 {
+    font-size: 26px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+h4{
+    font-size: 16px;
+}
+
+h5{
+    font-size: 14px;
+}
+
 .title {
-    font-family: 'Georgia', Serif;
+    font-family: 'Georgia', serif;
 }
 
 a {
@@ -39,34 +60,19 @@ a {
 
 a:hover {
     background: #c0daa4;
-    color: #000000;
+    color: #000;
     text-shadow: 1px 1px 5px rgba(0,0,0,0.4);
     text-decoration: none;
-}
-
-h1 {
-    font-size: 25px;
-}
-
-h2 {
-    font-size: 22px;
-}
-
-
-h3 {
-    font-size: 18px;
-}
-
-h4{
-    font-size: 16px;
-}
-
-h5{
-    font-size: 14px;
+    padding: 2px;
 }
 
 p {
     margin-bottom: 1em;
+    line-height: 27px;
+}
+
+b, strong {
+    font-weight: 600;
 }
 
 blockquote {
@@ -79,9 +85,9 @@ pre {
     background: #C0DAA4;
     color: #000;
     display: block;
-    font-size: 12px;
+    font-size: 11px;
     line-height: 1.5em;
-    font-family: monospace;
+    font-family: 'Droid Sans Mono', monospace;
     white-space: pre-wrap;       /* css-3 */
     white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
     white-space: -pre-wrap;      /* Opera 4-6 */
@@ -97,32 +103,42 @@ pre {
     box-shadow: 5px 5px 20px #647F47;
 }
 
-code {background: #c0daa4; color: #000; font-family: monospace; font-size: 15px; padding-left: 3px; padding-right: 3px; padding-top: 1px; padding-bottom: 1px;}
+code {
+    background: #c0daa4;
+    color: #000;
+    font-family: 'Droid Sans Mono', monospace;
+    font-size: 13px;
+    padding: 2px 3px;
+}
 
-ul{
-    margin: 0 0 1em 1.5em;
-    list-style: disc outside;
+ul {
+    margin: 0 0 1em 0;
+    list-style: none;
 }
-ul li{
+
+ul li {
     line-height: 1.5em;
-    padding-left: 0.2em;
+    padding-left: 1.7em;
+    background: url('/images/arrow.png') no-repeat 12px 9px;
 }
-ul li.caption{ /* Apply this class to the first list item in a list to give it a caption */
+
+ul li.caption { /* Apply this class to the first list item in a list to give it a caption */
     font-variant: small-caps;
     list-style: none;
     color: #000;
 }
+
 li > ul, li > ol{
     margin-left: 2em;
 }
-li > ul li, li > ol li{
-}
-ol{
-    margin-bottom: 1.8em;
+
+ol {
+    margin-bottom: 1.9em;
     list-style: decimal inside;
 }
-ol li{
-    line-height: 1.5em;
+
+ol li {
+    line-height: 1.7em;
 }
 
 dt {
@@ -132,7 +148,7 @@ dt {
     margin-bottom: 0.5em;
     padding-bottom: 0.2em;
     font-size: 1.1em;
-    font-family: 'Georgia',serif;
+    font-family: 'Georgia', serif;
     border-bottom: 1px solid #AAC986;
 }
 
@@ -141,9 +157,8 @@ dt a:after {
 }
 
 dd {
-    margin-left:    5em;
+    margin-left: 5em;
 }
-
 
 table {
     width: 100%;
@@ -215,7 +230,7 @@ table td {
 
 #header a:hover {
     background: transparent;
-    color: inherit;;
+    color: inherit;
     text-shadow: none;
     text-decoration: none;
 }
@@ -231,7 +246,6 @@ table td {
     margin: 0;
 }
 
-
 #top_left_menu {
     position: absolute;
     list-style: none;
@@ -242,6 +256,8 @@ table td {
 }
 
 #top_left_menu a {
+    font-size: 17px;
+    line-height: 25px;
     width: 90px;
     display: block;
     padding: 0 2px;
@@ -253,9 +269,8 @@ table td {
 }
 
 #top_left_menu a:hover {
-    color: #000000;
+    color: #000;
 }
-
 
 /* Content */
 #header_spacer {
@@ -313,7 +328,7 @@ table td {
 
 .posts a:hover {
     background: #c0daa4;
-    color: #000000;
+    color: #000;
     text-shadow: 1px 1px 5px #eee;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -326,7 +341,6 @@ table td {
     color: black;
 }
 
-
 /* Download pages */
 .download {
     width: 600px;
@@ -338,7 +352,6 @@ table td {
     margin: 0 0 40px;
     font-size: 30px;
 }
-
 
 /* Guide */
 .guide {
@@ -364,13 +377,11 @@ table td {
     width:  200px;
 }
 
-
 /* Blogposts & Tutorials */
 .blog {
     width: 760px;
     margin: auto;
 }
-
 
 /* Tutorials */
 .tutorials {
@@ -432,14 +443,29 @@ table td {
     width: 100%;
 }
 
+.thinseparator {
+    width: 100%;
+    height: 0.1em;
+    background: #222;
+    clear: both;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
 
-.thinseparator { width: 100%; height: 0.1em; background: #222222; clear: both; margin-top: 0.5em; margin-bottom: 0.5em;}
-.separator { width: 100%; height: 0.3em; background: #222222; clear: both; margin-top: 0.5em; margin-bottom: 0.5em;}
+.separator {
+    width: 100%;
+    height: 0.3em;
+    background: #222;
+    clear: both;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
 
 #header a {
     color: #000;
     text-decoration: none;
 }
+
 #header a:hover {
     color: #000;
     text-decoration: none;
@@ -449,15 +475,18 @@ table td {
     width: 100%;
     height: 100%;
 }
+
 #guide_content {
     float: left;
     width: 600px;
 }
+
 #guide_sidebar {
     float: right;
     width: 200px;
     font-size: 16px;
 }
+
 #guide_sidebar h3 {
     font-size: 20px;
     margin-bottom: 5px;
@@ -470,19 +499,23 @@ table td {
     margin-left: 2em;
     margin-right: 0;
 }
+
 .left-float{ /* Float any item to the left */
     float: left;
     margin-right: 2em;
     margin-left: 0;
 }
+
 /* Sets styles for any 'end' grids - this class MUST be given to a grid that is the last in a horizontal series */
 .end{
     margin-left: 0 !important;
     margin-right: 0 !important;
 }
+
 img{
     font-size: 1em;
 }
+
 img.left-img{ /* Float any image to the LEFT and give it some margin */
     font-size: 1em;
     float: left;
@@ -491,6 +524,7 @@ img.left-img{ /* Float any image to the LEFT and give it some margin */
     margin-right: 10px;
     margin-top: 3px;
 }
+
 img.right-img{ /* Float any image to the RIGHT and give it some margin */
     font-size: 1em;
     float: right;
@@ -499,7 +533,6 @@ img.right-img{ /* Float any image to the RIGHT and give it some margin */
     margin-left: 10px;
     margin-top: 3px;
 }
-
 
 /*DISQUS*/
 
@@ -513,4 +546,3 @@ img.right-img{ /* Float any image to the RIGHT and give it some margin */
 .dsq-global-toolbar-likes {
     border: none !important;
 }
-
